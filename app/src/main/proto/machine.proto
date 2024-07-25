@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "com.example.pricecompute.gen"; // Replace with your actual package name
+option java_multiple_files = true;
+
+message MachinePrefs {
+  string machine_name = 1;
+  string desc = 2;
+  optional int32 cpu_limit = 3;
+  optional int32 gpu_limit = 4;
+  optional int32 ssd = 5;
+  optional int32 hdd = 6;
+  string expiry_date = 7; // Store as ISO-8601 string (YYYY-MM-DD)
+  bool is_expired = 8;
+}
